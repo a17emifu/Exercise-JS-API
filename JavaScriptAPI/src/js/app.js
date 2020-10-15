@@ -1,5 +1,7 @@
 console.log('app.js')
-import Model from './model.js'
+
+//import Model from './model.js'
+import Model from '../mocks/model.js'
 import View from './view.js'
 import Controller from './controller.js'
 

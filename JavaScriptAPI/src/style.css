@@ -1,0 +1,13 @@
+.result-parent {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.result-child {
+    background-color: antiquewhite;
+    margin: 5%;
+    padding: 2%;
+}
+img {
+    width: 100px;
+    height: auto;
+}
