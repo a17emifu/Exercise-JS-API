@@ -1,13 +1,22 @@
 .result-parent {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
 }
 .result-child {
+    text-align: center;
+    display: flex;
+    flex-flow:  column nowrap;
     background-color: antiquewhite;
-    margin: 5%;
+    width: 100%;
+    margin: 2%;
     padding: 2%;
+    align-items: center;
 }
 img {
     width: 100px;
     height: auto;
+}
+.child-item {
+    margin-left: 2%;
+    margin-right: 2%;
 }

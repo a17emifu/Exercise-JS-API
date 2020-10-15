@@ -23,6 +23,7 @@ export default class Controller{
             console.timeEnd('fetch github')
 
             this.view.addGithubUser(user)
+            this.view.addGithubRepos(repos)
             //debugger
         }catch (error){
             if(error.status === 404){this.view.showNotFoundError()}
