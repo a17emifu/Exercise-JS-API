@@ -46,7 +46,7 @@ export default class View {
         //debugger
     }
 
-    addGithubRepos(repos){
+    addGithubrepos(repos){
         let reposInfo = document.querySelector('#reposInfo')
         let divparent = document.createElement("div")
         divparent.classList.add("result-parent")
@@ -70,7 +70,7 @@ export default class View {
         reposInfo.appendChild(divparent)
     }
 
-    addGithubReposAsCarousel(repos) {
+    addGithubreposAsCarousel(repos) {
         let carousel = document.querySelector('#carousel')
         carousel.classList.add("swiper-container")
 
@@ -104,6 +104,50 @@ export default class View {
         carousel.appendChild(swiperBtnPrev)
         carousel.appendChild(swiperBtnNext)
     }
+
+    addMoviesAsCarousel(movies) {
+        let carousel = document.querySelector('#movie')
+        carousel.classList.add("swiper-container")
+
+        let swiperWrapper = document.createElement('div')
+        swiperWrapper.classList.add("swiper-wrapper")
+        
+        var ranking =0
+        
+        for (var i = 0; i<movies.length; i++){
+            ranking++
+            var swiperSlide = document.createElement('div')
+            swiperSlide.classList.add("swiper-slide")
+            //swiperSlide.style.backgroundImage = "url(" + movies[i].Poster + ")"
+
+            let img = document.createElement('img')
+            img.src = movies[i].Poster
+            swiperSlide.appendChild(img)
+
+            let title = document.createElement('span')
+            title.innerHTML = `${ranking}: ${movies[i].Title}` 
+            swiperSlide.appendChild(title)
+
+            swiperWrapper.appendChild(swiperSlide)
+        }
+
+
+        let swiperPagination = document.createElement('div')
+        swiperPagination.classList.add("swiper-pagination")
+
+        let swiperBtnPrev = document.createElement('div')
+        swiperBtnPrev.classList.add("swiper-button-prev")
+
+        let swiperBtnNext = document.createElement('div')
+        swiperBtnNext.classList.add("swiper-button-next")
+        
+        carousel.appendChild(swiperWrapper)
+        
+        carousel.appendChild(swiperPagination)
+        carousel.appendChild(swiperBtnPrev)
+        carousel.appendChild(swiperBtnNext)
+    }
+
 
     makeSwiper(){
         console.log('swiper made')
