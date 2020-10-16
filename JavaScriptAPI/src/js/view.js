@@ -69,6 +69,58 @@ export default class View {
         }
         reposInfo.appendChild(divparent)
     }
+
+    addGithubReposAsCarousel(repos) {
+        let carousel = document.querySelector('#carousel')
+        carousel.classList.add("swiper-container")
+
+        let swiperWrapper = document.createElement('div')
+        swiperWrapper.classList.add("swiper-wrapper")
+
+        for (var i = 0; i<repos.length; i++){
+            var swiperSlide = document.createElement('div')
+            swiperSlide.classList.add("swiper-slide")
+            swiperSlide.style.backgroundImage = "url(" + repos[i].owner.avatar_url + ")"
+
+            let reponame = document.createElement("span")
+            reponame.innerHTML = repos[i].name
+            swiperSlide.appendChild(reponame)
+
+            swiperWrapper.appendChild(swiperSlide)
+        }
+
+
+        let swiperPagination = document.createElement('div')
+        swiperPagination.classList.add("swiper-pagination")
+
+        let swiperBtnPrev = document.createElement('div')
+        swiperBtnPrev.classList.add("swiper-button-prev")
+
+        let swiperBtnNext = document.createElement('div')
+        swiperBtnNext.classList.add("swiper-button-next")
+        
+        carousel.appendChild(swiperWrapper)
+        carousel.appendChild(swiperPagination)
+        carousel.appendChild(swiperBtnPrev)
+        carousel.appendChild(swiperBtnNext)
+    }
+
+    makeSwiper(){
+        console.log('swiper made')
+        var swiper = new Swiper('.swiper-container', {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+      
+        });
+    }
     showNotFoundError(){
         main.textContent = "404 NOT FOUND"
     }
