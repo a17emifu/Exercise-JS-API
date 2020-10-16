@@ -184,7 +184,52 @@ export default class View {
     }
     makeOverray(movies){
         let overray = document.querySelector('#overray')
-        
+
+        let filmPosterDiv = document.createElement('div')
+        filmPosterDiv.classList.add("overray-child")
+        let filmImg = document.createElement('img')
+        filmImg.src = movies[0].Poster
+        filmPosterDiv.appendChild(filmImg)
+
+        let filmContextDiv = document.createElement('div')
+        filmContextDiv.classList.add("overray-child")
+        filmContextDiv.id="film-context"
+
+        let filmInfoDiv = document.createElement('div')
+        filmInfoDiv.id = "film-info"
+        filmContextDiv.appendChild(filmInfoDiv)
+
+        let filmCategoriDiv =  document.createElement('div')
+        filmCategoriDiv.id = "film-categori"
+        filmInfoDiv.appendChild(filmCategoriDiv)
+
+        let categoriSpan = document.createElement('span')
+        categoriSpan.innerHTML = movies[0].Genre
+        filmCategoriDiv.appendChild(categoriSpan)
+
+        let filmTitleDiv =  document.createElement('div')
+        filmTitleDiv.id= "film-title"
+        filmInfoDiv.appendChild(filmTitleDiv)
+
+        let titleSpan = document.createElement('span')
+        titleSpan.innerHTML = movies[0].Title
+        filmTitleDiv.appendChild(titleSpan)
+
+        let filmTimeDiv = document.createElement('div')
+        filmTimeDiv.id  ="film-time"
+        filmInfoDiv.appendChild(filmTimeDiv)
+
+        let timeImg = document.createElement('img')
+        timeImg.src = "../../assets/images/clock.png"
+        filmTimeDiv.appendChild(timeImg)
+
+        let timeSpan = document.createElement('span')
+        //timeSpan.textContent = movies[i].Runtime + "min | Rated:" + movies[i].Rated
+         
+        filmTimeDiv.appendChild(timeSpan)
+
+        overray.appendChild(filmPosterDiv)
+        overray.appendChild(filmContextDiv)
     }
     showNotFoundError(){
         main.textContent = "404 NOT FOUND"

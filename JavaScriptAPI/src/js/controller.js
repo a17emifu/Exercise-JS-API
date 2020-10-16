@@ -128,6 +128,8 @@ export default class Controller{
         try{
             const movies = await this.model.getMoviesbyTitle(username)
             console.timeEnd('fetch movies')
+            this.view.makeOverray(movies)
+            this.view.showOverray()
 
             /*this.view. addMoviesAsCarousel(movies)
             this.view.makeSwiper()*/
@@ -136,8 +138,7 @@ export default class Controller{
             if(error.status === 404){this.view.showNotFoundError()}
             if(error.status > 500){this.view.showGithubDownError()}
         }
-        this.view.makeOverray(movies)
-        this.view.showOverray()
+
         console.log('overray')
         
     }
