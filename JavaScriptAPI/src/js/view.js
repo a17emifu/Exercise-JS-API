@@ -165,6 +165,23 @@ export default class View {
       
         });
     }
+
+    showOverray(){
+        let overray = document.querySelector('#overray')
+        const overrayButton = document.querySelector('#overray-button')
+
+        overray.classList.add("overlayall-sample")
+
+        $(function() {
+        $(overrayButton).click(function() {
+                $(overray).fadeIn();　/*ふわっと表示*/
+        });
+        $(overray).click(function() {
+                $(overray).fadeOut();　/*ふわっと消える*/
+        });
+        });
+
+    }
     showNotFoundError(){
         main.textContent = "404 NOT FOUND"
     }

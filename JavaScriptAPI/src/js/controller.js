@@ -1,6 +1,7 @@
 const searchButton = document.querySelector('#search-button')
 const carouselButton = document.querySelector('#carousel-button')
 const movieButton = document.querySelector('#movie-button')
+const overrayButton = document.querySelector('#overray-button')
 
 export default class Controller{
     constructor(model, view) {
@@ -11,6 +12,8 @@ export default class Controller{
         //carouselButton.addEventListener('click', () => {this.viewCarousel() })
         //movieButton.addEventListener('click', () => {this.viewMovies() })
         movieButton.addEventListener('click', () => {this.viewMoviesMock() })
+        overrayButton.addEventListener('click', () => {this.showOverray()})
+
 
 
     }
@@ -117,5 +120,12 @@ export default class Controller{
             if(error.status === 404){this.view.showNotFoundError()}
             if(error.status > 500){this.view.showGithubDownError()}
         }
+    }
+
+    async showOverray(){
+       
+        this.view.showOverray()
+        console.log('overray')
+        
     }
 }
