@@ -182,6 +182,10 @@ export default class View {
         });
 
     }
+    makeOverray(movies){
+        let overray = document.querySelector('#overray')
+        
+    }
     showNotFoundError(){
         main.textContent = "404 NOT FOUND"
     }

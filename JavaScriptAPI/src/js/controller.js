@@ -123,7 +123,20 @@ export default class Controller{
     }
 
     async showOverray(){
-       
+        console.log('mock movies loading..')
+        const username = '31b458bf'
+        try{
+            const movies = await this.model.getMoviesbyTitle(username)
+            console.timeEnd('fetch movies')
+
+            /*this.view. addMoviesAsCarousel(movies)
+            this.view.makeSwiper()*/
+            
+        }catch (error){
+            if(error.status === 404){this.view.showNotFoundError()}
+            if(error.status > 500){this.view.showGithubDownError()}
+        }
+        this.view.makeOverray(movies)
         this.view.showOverray()
         console.log('overray')
         

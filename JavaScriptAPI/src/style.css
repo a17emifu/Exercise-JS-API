@@ -70,6 +70,12 @@ body {
   align-items: center;
 }
 
+#overray{
+  display: flex;
+  flex-flow: column nowrap;
+  /*align-items: center;*/
+  background-color: wheat;
+}
 .overlayall-sample {
   display: none;
   width: 100%;
@@ -80,4 +86,61 @@ body {
   left: 0;
   z-index: 100;
   background: rgba(0,0,0,0.9);
+}
+.overray-child {
+  background-color: tomato;
+}
+.overray-child img {
+  width: 100%;
+  height: auto;
+}
+#film-categori {
+  display: inline-block;
+background: linear-gradient(90deg, #F27A54 -21.05%, #A154F2 121.05%);
+color: white;
+
+}
+#film-title{
+  font-size: 30px;
+}
+#film-time{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+#film-time img {
+  width: 10%;
+  height: auto;
+}
+#film-rating {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+#film-context {
+  padding: 2%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.ratings {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.ratings img {
+  width: 50px;
+  height: auto;
+}
+#film-like-dislike {
+  padding-right: 2%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+#dislike {
+  transform: scale(1, -1)
+}
+.like-dislike img {
+  width: 20px;
 }
