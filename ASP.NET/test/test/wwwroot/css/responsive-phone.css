@@ -1,0 +1,155 @@
+/* External stylesheet för att anpassa sidor för telefoner*/
+
+/* Meny */
+
+nav {
+    width: 100%;
+    height: 70px;
+}
+
+.drawer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 1em;
+    
+   }
+#logo {
+    width: 15%;
+    height: auto;
+}
+#menu-icon {
+    display: block;
+    position: fixed; 
+    right:15px;
+    width: 10%;
+    height: auto;
+}
+.toggle {
+    display: block;
+    z-index: 3;
+}
+
+#menu-flex nav ul {
+    display: inline-flex;
+    flex-flow: column nowrap;
+    background-color: indianred;
+    padding-left: 2%;
+    padding-right: 2%;
+    position: relative;
+    top: 120%;
+    
+}
+
+#menu-flex nav ul li {
+    padding: 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#menu-flex{
+    text-align:center;
+    transition: 0.5s ease;
+    transform: translateX(100%);
+  }
+
+#menu-flex.open{
+    transform: translateX(0%);
+}
+
+/* MAIN */
+.section-size 
+{
+    height: 400px;
+}
+.h1-textzone h1 {
+    font-size: 30px;
+    position: relative;
+    top: 30%;
+}
+.h1-textzone p {
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    left: 10%;
+}
+
+/* OM OSS */
+#studios {
+    padding-bottom: 0;
+}
+.adress-parent {
+    display: flex;
+    flex-direction: column;
+}
+
+/* KLASSER */
+#classes-parent {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+.classes-table {
+    padding: 0;
+    margin: 0;
+}
+#h2-classes {
+    color: whitesmoke;
+}
+
+/* RECEPT */
+#p-recipes {
+    font-size: 30px;
+}
+
+.recipe-position {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.recipe-list h3 {
+    margin-left: -2%;
+    margin-bottom: 2%;
+}
+
+.recipe-list ul li {
+    padding: 2%;
+}
+
+/* KONSTAKTA OSS */
+#contact-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.opentime {
+    margin-bottom: 5%;
+    text-align: center;
+}
+.contacts {
+    margin: 0;
+}
+
+/* FOOTER */
+.footer-flex {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.footer-about {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3%;
+    margin-left: 0;
+}
+
+.footer-contact {
+    text-align: center;
+    margin-right: 0;
+}

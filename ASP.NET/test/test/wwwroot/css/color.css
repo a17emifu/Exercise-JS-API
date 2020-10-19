@@ -1,0 +1,87 @@
+/* External stylesheet för färger*/
+
+/* Header */
+header {
+    background-color: black;
+}
+
+/* Meny */
+nav ul li a {
+    color: white;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+/* MAIN */
+h1  {
+    color: white;
+}
+.h1-textzone {
+    background-color: rgba(0,0,0,0.6);
+
+}
+.main-content p {
+    color: black;
+}
+.h1-textzone p {
+    
+    color: white;
+}
+
+/* OM OSS */
+.adress-parent {
+    color: white;
+}
+
+#studios {
+    background-color: lightgray;
+}
+#h2-studio {
+    color: black;
+}
+
+/* KLASSER */
+.classes-table table  {
+    background-color: #604439;
+    color: honeydew;
+}
+.classes-table table thead {
+    background-color: rgb(172, 66, 48);
+}
+.table-line {
+    background-color: #696630;
+    
+}
+
+/* RECEPT */
+.recipe {
+    background-color: gainsboro;
+}
+.h2-textzone {
+    background-color: rgba(0,0,0,0.6);
+
+}
+.h2-textzone h2 {
+    color: whitesmoke;
+}
+/* Footer */
+footer{
+    color: white;
+}
+.footer-flex{
+    background-color: black;
+}
+footer section.footer-about{
+    background-color: black;
+    
+}
+footer section.footer-socials{
+    background-color: black;
+}
+.footer-copy {
+    background-color: black;
+    opacity: 80%;
+}
+

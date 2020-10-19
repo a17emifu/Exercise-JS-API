@@ -1,0 +1,20 @@
+/* External stylesheet för att anpassa sidor för en liten skärm*/
+
+/* FOOTER */
+.footer-flex {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.footer-about {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3%;
+    margin-left: 0;
+}
+
+.footer-contact {
+    text-align: center;
+    margin-right: 0;
+}

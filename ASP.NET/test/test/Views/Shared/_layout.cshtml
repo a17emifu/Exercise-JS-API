@@ -1,0 +1,60 @@
+﻿
+<!DOCTYPE html>
+<html lang="se">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPF Cooking Studio</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/resoinsive-minipc.css" media="screen and (max-width: 1341px)">
+    <link rel="stylesheet" href="../css/responsive-phone.css" media="screen and (max-width: 768px)">
+
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <header>
+        <div id="drawer">
+            <a href="index.html"><img id="logo" src="../assets/images/logo.png" alt="logo"></a>
+            <img class="toggle" id="menu-icon" src="../assets/images/menu.png" alt="menu-icon">
+        </div><!-- /.drawer -->
+        <div id="menu-flex">
+            <nav>
+                <ul>
+                    <li>@Html.ActionLink("HEM", "Index", "start")</li>
+                    <li>@Html.ActionLink("OM OSS", "Index", "about")</li>
+                    <li><a href="classes.html">KLASSER</a></li>
+                    <li><a href="recipes.html">RECEPT</a></li>
+                    <li><a href="contact.html">KONTAKTA OSS</a></li>
+                </ul>
+            </nav>
+        </div><!-- /#menu-flex -->
+    </header>
+
+    @RenderBody();
+
+    <footer>
+        <div class="footer-flex">
+            <section class="footer-about">
+                <h3><b>JPF cooking studio</b></h3>
+                <p>Matlagnings utbildning för japansk mat.</p>
+            </section>
+            <section class="footer-socials">
+                <ul>
+                    <li><a href="#"><img class="social-icons" src="../assets/images/twitter.png" alt=""></a></li>
+                    <li><a href="#"><img class="social-icons" src="../assets/images/facebook.png" alt=""></a></li>
+                    <li><a href="#"><img class="social-icons" src="../assets/images/instagram.png" alt=""></a></li>
+                </ul>
+            </section>
+            <section class="footer-contact">
+                <p>Emiko Johansson: emjo1804@student.miun.se</p>
+            </section>
+        </div><!-- /.footer-flex -->
+        <section class="footer-copy">
+            &copy; JPF cooking studio
+        </section>
+    </footer>
+    <script type="text/javascript" src="../js/js.js"></script>
+</body>
+</html>
