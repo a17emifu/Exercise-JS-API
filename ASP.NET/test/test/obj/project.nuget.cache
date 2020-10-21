@@ -1,8 +1,26 @@
 {
   "version": 2,
-  "dgSpecHash": "VfapP4qs12pI2RO1sSqrr1NU6d9PJKX29Iasynm87Oe8ArRUpWqk3ZWQuwCjXaQ/ewaX3lDuMVxLxvOu4DRBVQ==",
+  "dgSpecHash": "ZbyiWYOrgh9YA/YhUylNnV0m5QpVcfmrydmTvTr2YVE6uxLdbnkgBKHTu05yd6OuY/8JcaoYXXtW4TvXZzuFFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Emiko\\Desktop\\Univresitetet\\Informatik2020\\Interaktiva webbapplikationer\\あそびば\\ASP.NET\\test\\test\\test.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Emiko\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\3.1.9\\microsoft.aspnetcore.mvc.razor.extensions.3.1.9.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\3.1.9\\microsoft.aspnetcore.mvc.razor.runtimecompilation.3.1.9.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\3.1.9\\microsoft.aspnetcore.razor.language.3.1.9.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\2.9.3\\microsoft.codeanalysis.analyzers.2.9.3.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\microsoft.codeanalysis.common\\3.3.0\\microsoft.codeanalysis.common.3.3.0.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\microsoft.codeanalysis.csharp\\3.3.0\\microsoft.codeanalysis.csharp.3.3.0.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\microsoft.codeanalysis.razor\\3.1.9\\microsoft.codeanalysis.razor.3.1.9.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\microsoft.extensions.dependencymodel\\3.1.6\\microsoft.extensions.dependencymodel.3.1.6.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\system.collections.immutable\\1.5.0\\system.collections.immutable.1.5.0.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
+    "C:\\Users\\Emiko\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.3\\system.threading.tasks.extensions.4.5.3.nupkg.sha512"
+  ],
   "logs": []
 }

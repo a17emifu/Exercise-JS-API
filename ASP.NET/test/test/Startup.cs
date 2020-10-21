@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using test.Data;
+using test.Test;
 
 namespace test
 {
@@ -17,6 +19,12 @@ namespace test
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            //services.AddScoped<IMovieRepository, MovieRepository>();
+            services.AddScoped<ILikeDislikeRepository, LikeDislikeMockRepository>();
+            services.AddScoped<IMovieRepository, MovieMockRepository>();
+            services.AddScoped<GenerikMockRepository>();
+            services.AddMvc().AddRazorRuntimeCompilation();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,7 +42,7 @@ namespace test
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Start}/{action=Index}/{id?}"
+                    pattern: "{controller=Start}/{action=Movie}/{id?}"
                     );
             });
         }

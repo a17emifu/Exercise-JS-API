@@ -1,0 +1,197 @@
+/*Media Query*/
+@media screen and (max-width:767px) {
+    
+    .footer-copyright {
+        font-size: 16px;
+    }
+
+    .footer-cocials {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .footer-flex {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+}
+
+body {
+    background-color: black;
+    font-family: 'Zilla Slab', serif;
+}
+
+/*NAV*/
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    white-space: nowrap;
+
+    
+    
+}
+
+nav {
+   background-color: #3C444C;
+   
+}
+
+nav .btn {
+    border-radius: 30px;
+    border: none;
+    width: 100px;
+    background: -moz-linear-gradient(left, #F27A54, #A154F2);
+    background: -webkit-linear-gradient(left, #F27A54, #A154F2);
+    background: linear-gradient(to right, #F27A54, #A154F2);
+}
+
+/*FOOTER*/
+footer {
+    /*position: fixed;*/
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #3C444C;
+}
+
+.footer-copyright {
+    color: white;
+}
+
+/*MAIN*/
+main {
+    text-align: center;
+    padding-top: 2%;
+    color: white;
+}
+
+/*SWIPER*/
+.swiper-container {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.swiper-slide{
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    
+    font-size: 18px;
+    /*background: #fff;*/
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-wrapper{
+    margin-bottom: 3%
+}
+
+.swiper-pagination-bullet {
+    background-color: white;
+
+}
+
+.swiper-button-prev {
+
+    background-color: #30363d65;
+    
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.swiper-button-next {
+    background-color: #30363d65;
+    
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/*TOP FILMEN*/
+#top-film {
+    width: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    text-align: center;
+
+}
+
+.category{
+    display: inline;
+    padding: 5px;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    background: -moz-linear-gradient(left, #160F0C, #A154F2);
+    background: -webkit-linear-gradient(left, #160F0C, #A154F2);
+    background: linear-gradient(to right, #160F0C, #A154F2);
+
+    font-size: 15px;
+    font-weight: bold;
+}
+#top-film-info {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right 10% bottom 20%;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    padding-left: 15%;
+    
+}
+
+#top-film-actors{
+    text-align: left;
+}
+#top-film-directors {
+    text-align: left;
+}
+#clock {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.like {
+    margin-right: 20px;
+}
+#top-film-like-dislike {
+    margin-bottom: 2%;
+}
+#film-detail-btn {
+    width: 200px;
+    margin-top: 5%;
+    border-radius: 30px;
+    background: -moz-linear-gradient(left, #F27A54, #A154F2);
+    background: -webkit-linear-gradient(left, #F27A54, #A154F2);
+    background: linear-gradient(to right, #F27A54, #A154F2);
+}
+.filter {
+    width: auto;
+    background-color: rgba(128, 128, 128, 0.164);
+    
+    padding: 1%;
+
+}
+
+/*FILM RANKING*/
+#top10-from-IMDb-ranking {
+    margin-bottom: 10%;
+}

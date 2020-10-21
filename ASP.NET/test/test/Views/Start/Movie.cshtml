@@ -1,0 +1,112 @@
+﻿@model MovieViewModel
+<main>
+    <section class="d-flex flex-column ">
+
+
+        <div id="top-film">
+            <h2>Top filmen</h2>
+            <div class="filter">
+
+                <div id="top-film-info" style="background-image: url(@Model.Movies[0].Poster)" ; class="d-flex flex-column align-items-start">
+                    <div class="category">
+                        <span>@Model.Movies[0].Genre</span>
+                    </div><!-- /.category -->
+                    <h1 id="top-film-title">@Model.Movies[0].Title</h1>
+                    <div class="d-inline-flex flex-row flex-nowrap">
+                        <img id="clock" src="../assets/images/clock.png" alt="">
+                        <div>
+                            <span id="top-film-time">@Model.Movies[0].Runtime</span>
+                            <span>|</span>
+                            <span id="top-film-rate">@Model.Movies[0].Rated</span>
+                        </div>
+                    </div>
+                    <div id="top-film-like-dislike" class=" d-flex flex-row">
+                        <div class="like">
+                            <img src="../assets/images/like.png" alt="">
+                            <span>@Model.LikeDislikeDto.numberOfLikes</span><span> Likes</span>
+</div><!-- /.like -->
+                        <div class="dislike">
+                            <img src="../assets/images/like.png" alt="">
+                            <span>@Model.LikeDislikeDto.numberOfLikes</span><span> Dislikes</span>
+                        </div><!-- /.dislike -->
+                    </div><!-- /#top-film-like-dislike -->
+                    <span id="top-film-actors">@Model.Movies[0].Actors</span>
+                    <span id="top-film-directors">@Model.Movies[0].Director</span>
+
+                    <button id="film-detail-btn" class="btn btn-secondary ">Detaljer ></button>
+
+                </div>
+            </div><!-- /.top-film -->
+        </div><!-- /.filter -->
+
+        <div id="top10-from-IMDb-ranking">
+            <h2>
+                Top 10 från IMDb Ranking
+            </h2>
+
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides (kallas från model i c#) -->
+                    @for (var i = 1; i < Model.Movies.Count; i++)
+                    {
+                        int counter = i+1;
+                        var movie = Model.Movies[i];
+                        <div class="swiper-slide">
+                            <img class="film-img" src="@Html.DisplayFor(item => movie.Poster)" alt="">
+                            <span class="film-span">@counter: @Html.DisplayFor(item => movie.Title)</span>
+                        </div>
+
+                    }
+                </div>
+                <!--  pagination -->
+                <div class="swiper-pagination swiper-pagination-white"></div>
+
+                <!--  navigation buttons -->
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
+
+                <!--  scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+        </div>
+
+        <div id="top10-from-CMDb-btns">
+            <h2>Top 10 från användare</h2>
+
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+
+                <div class="swiper-wrapper">
+                    <!-- Slides (kallas från model i c#)-->
+                    <div class="swiper-slide">
+                        <img class="film-img2" src="" alt="">
+                        <span class="film-span2"></span>
+                    </div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">Slide 10</div>
+                </div>
+                <!--  pagination -->
+                <div class="swiper-pagination swiper-pagination-white"></div>
+
+                <!--  navigation buttons -->
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
+
+                <!--  scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
