@@ -12,19 +12,18 @@ namespace test.Test
 {
     public class LikeDislikeMockRepository : ILikeDislikeRepository
     {
-        string basePath;
-        GenerikMockRepository generikMockRepository;
-        public LikeDislikeMockRepository(IWebHostEnvironment webHostEnvironment, GenerikMockRepository mockRepository)
+        
+        MockRepository mockRepository;
+        public LikeDislikeMockRepository(MockRepository mockRepository)
         {
-            basePath = $"{webHostEnvironment.ContentRootPath}\\Test\\Mockdata";
-            generikMockRepository = mockRepository;
-            generikMockRepository.basePath = basePath;
+            this.mockRepository = mockRepository;
+           
         }
 
         public async Task<LikeDislikeDto> GetLikeDislike(string imbid)
         {
             string testFile= "likeDislike.json";
-            var result = generikMockRepository.GetTestData<LikeDislikeDto>(testFile);
+            var result = mockRepository.GetTestData<LikeDislikeDto>(testFile);
             await Task.Delay(0);
             return result;
         }

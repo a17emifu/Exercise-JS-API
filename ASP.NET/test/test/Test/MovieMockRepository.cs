@@ -10,13 +10,11 @@ namespace test.Test
 {
     public class MovieMockRepository : IMovieRepository
     {
-        string basePath;
-        GenerikMockRepository generikMockRepository;
-        public MovieMockRepository(IWebHostEnvironment webHostEnvironment, GenerikMockRepository generikMockRepository )
+        
+        MockRepository generikMockRepository;
+        public MovieMockRepository(MockRepository generikMockRepository )
         {
-            basePath = $"{webHostEnvironment.ContentRootPath}\\Test\\Mockdata";
             this.generikMockRepository = generikMockRepository;
-            generikMockRepository.basePath = basePath;
 
         }
         public Task<MovieDto> GetMovie(string imbid) {

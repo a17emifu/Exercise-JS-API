@@ -22,7 +22,8 @@ namespace test
             //services.AddScoped<IMovieRepository, MovieRepository>();
             services.AddScoped<ILikeDislikeRepository, LikeDislikeMockRepository>();
             services.AddScoped<IMovieRepository, MovieMockRepository>();
-            services.AddScoped<GenerikMockRepository>();
+            services.AddScoped<MockRepository>();
+            services.AddScoped<Repository>();
             services.AddMvc().AddRazorRuntimeCompilation();
 
         }
