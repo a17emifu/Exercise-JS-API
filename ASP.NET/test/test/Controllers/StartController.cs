@@ -21,8 +21,10 @@ namespace test.Controllers
         public async  Task<IActionResult> Index()
         {
             string imbId = "tt4729430";
+            string param = "movie";
             var movie = await movieRepository.GetMovie(imbId);
-            return View(movie);
+            var likeDislike = await likeDislikeRepository.GetLikeDislike(param);
+            return View(likeDislike);
         }
 
         public async Task<IActionResult> Movie()
