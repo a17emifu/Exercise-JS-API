@@ -44,7 +44,7 @@ namespace test
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Start}/{action=Movie}/{id?}"
+                    pattern: "{controller=Start}/{action=Start}/{id?}"
                     );
             });
         }

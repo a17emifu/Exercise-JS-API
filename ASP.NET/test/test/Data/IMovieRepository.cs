@@ -8,7 +8,9 @@ namespace test.Data
 {
     public interface IMovieRepository
     {
-       Task<MovieDto> GetMovie(string imbid);
-       Task<List<MovieDto>> GetMovies(string imbid);
+       //void SetEndpoint();
+       string ApiKey { get; set; }
+       Task<MovieDto> GetMoviebyImdbId(string imdbid); 
+       Task<List<MovieDto>> GetMovies(List<LikeDislikeDto> top10lists);
     }
 }

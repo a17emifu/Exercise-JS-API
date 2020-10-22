@@ -7,6 +7,7 @@ namespace test.Models.DTO
 {
     public class MovieDto
     {
+        public string imdbID { get; set; }
         public string Title { get; set; }
         public string Year { get; set; }
         public string Rated { get; set; }
