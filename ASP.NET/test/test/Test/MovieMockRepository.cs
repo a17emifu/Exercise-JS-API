@@ -8,13 +8,13 @@ using test.Models.DTO;
 
 namespace test.Test
 {
-    public class MovieMockRepository : IMovieRepository
+    public class MovieMockRepository : BaseMockRepository, IMovieRepository
     {
         
-        MockRepository generikMockRepository;
-        public MovieMockRepository(MockRepository generikMockRepository )
+       
+        public MovieMockRepository(IWebHostEnvironment webHostEnvironment )
         {
-            this.generikMockRepository = generikMockRepository;
+            SetBasePath(webHostEnvironment);
 
         }
         public Task<MovieDto> GetMovie(string imbid) {
@@ -24,7 +24,7 @@ namespace test.Test
         public async Task<List<MovieDto>> GetMovies(string imbid)
         {
             string testFile = "movies.json";
-            var result = generikMockRepository.GetTestData<List<MovieDto>>(testFile);
+            var result = GetTestData<List<MovieDto>>(testFile);
             await Task.Delay(0);
             return result;
         }

@@ -15,9 +15,9 @@ namespace test.Data
     {
         readonly string baseUrl;
         readonly string apiKey;
-        Repository repository;
+        BaseRepository repository;
 
-        public MovieRepository(Repository repository, IConfiguration configuration)
+        public MovieRepository(BaseRepository repository, IConfiguration configuration)
         {
 
             baseUrl = configuration.GetValue<string>("OMDbApi:BaseUrl");

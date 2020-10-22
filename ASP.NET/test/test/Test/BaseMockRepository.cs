@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace test.Test
 {
-    public class MockRepository
+    public class BaseMockRepository
     {
         public string basePath { get; set; }
 
-        public MockRepository(IWebHostEnvironment webHostEnvironment)
+        public void SetBasePath(IWebHostEnvironment webHostEnvironment)
         {
             basePath = $"{webHostEnvironment.ContentRootPath}\\Test\\Mockdata";
         }

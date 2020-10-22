@@ -10,20 +10,18 @@ using test.Models.DTO;
 
 namespace test.Test
 {
-    public class LikeDislikeMockRepository : ILikeDislikeRepository
+    public class LikeDislikeMockRepository : BaseMockRepository, ILikeDislikeRepository
     {
         
-        MockRepository mockRepository;
-        public LikeDislikeMockRepository(MockRepository mockRepository)
+        public LikeDislikeMockRepository(IWebHostEnvironment webHostEnvironment)
         {
-            this.mockRepository = mockRepository;
-           
+            SetBasePath(webHostEnvironment);
         }
 
         public async Task<LikeDislikeDto> GetLikeDislike(string imbid)
         {
             string testFile= "likeDislike.json";
-            var result = mockRepository.GetTestData<LikeDislikeDto>(testFile);
+            var result = GetTestData<LikeDislikeDto>(testFile);
             await Task.Delay(0);
             return result;
         }

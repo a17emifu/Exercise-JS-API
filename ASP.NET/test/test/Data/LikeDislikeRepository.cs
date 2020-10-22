@@ -7,20 +7,19 @@ using test.Models.DTO;
 
 namespace test.Data
 {
-    public class LikeDislikeRepository : ILikeDislikeRepository
+    public class LikeDislikeRepository : BaseRepository, ILikeDislikeRepository
     {
-        readonly string baseUrl;
-        Repository repository;
+        
 
-        public LikeDislikeRepository(Repository repository, IConfiguration configuration)
+        public LikeDislikeRepository(IConfiguration configuration)
         {
             baseUrl = configuration.GetValue<string>("CMDbApi:BaseUrl");
-            this.repository = repository;
+
         }
         public Task<LikeDislikeDto> GetLikeDislike(string param)
         {
             string endPoint = $"{baseUrl}{param}";
-            var likeDislike = repository.GetData<LikeDislikeDto>(endPoint);
+            var likeDislike = GetData<LikeDislikeDto>(endPoint);
             return likeDislike;
         }
     }

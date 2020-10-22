@@ -19,12 +19,12 @@ namespace test
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddScoped<IMovieRepository, MovieRepository>();
-            services.AddScoped<ILikeDislikeRepository, LikeDislikeRepository>();
-            //services.AddScoped<ILikeDislikeRepository, LikeDislikeMockRepository>();
-            //services.AddScoped<IMovieRepository, MovieMockRepository>();
-            services.AddScoped<MockRepository>();
-            services.AddScoped<Repository>();
+            //services.AddScoped<IMovieRepository, MovieRepository>();
+            //services.AddScoped<ILikeDislikeRepository, LikeDislikeRepository>();
+            services.AddScoped<ILikeDislikeRepository, LikeDislikeMockRepository>();
+            services.AddScoped<IMovieRepository, MovieMockRepository>();
+            services.AddScoped<BaseMockRepository>();
+            services.AddScoped<BaseRepository>();
             services.AddMvc().AddRazorRuntimeCompilation();
 
         }
@@ -44,7 +44,7 @@ namespace test
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Start}/{action=Index}/{id?}"
+                    pattern: "{controller=Start}/{action=Movie}/{id?}"
                     );
             });
         }
