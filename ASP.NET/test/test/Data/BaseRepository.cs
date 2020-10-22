@@ -28,15 +28,18 @@ namespace test.Data
             }
         }
 
-        public async Task<List<T>> GetDatasByEndpoint<T>(string endpoint)
+        public async Task<List<T>> GetDatas<T>(string endpoint)
         {
-            throw new NotImplementedException();
-        }
+            using (HttpClient client = new HttpClient())
+            {
 
-
-        public async Task<List<T>> GetDatasByImdbId<T>(string imdbId)
-        {
-            throw new NotImplementedException();
+                string endPoint = endpoint;
+                var response = await client.GetAsync(endpoint, HttpCompletionOption.ResponseHeadersRead);
+                response.EnsureSuccessStatusCode();
+                var data = await response.Content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<List<T>>(data);
+                return result;
+            }
         }
     }
 }
