@@ -10,9 +10,9 @@ using test.Models.DTO;
 
 namespace test.Data
 {
-    public class BaseRepository
+    public class BaseRepository: IBaseRepository
     {
-        public string baseUrl;
+        public string baseUrl { get; set; }
 
         public async Task<T> GetData<T>(string endpoint)
         {
@@ -28,7 +28,13 @@ namespace test.Data
             }
         }
 
-        public async Task<List<T>> GetDatas<T>(string imbid)
+        public async Task<List<T>> GetDatasByEndpoint<T>(string endpoint)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public async Task<List<T>> GetDatasByImdbId<T>(string imdbId)
         {
             throw new NotImplementedException();
         }
